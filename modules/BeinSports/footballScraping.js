@@ -1,5 +1,7 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
+const dataJson = require("../data.json");
+const fs = require("fs");
 
 //---
 const getHtmlContent = async () => {
@@ -8,19 +10,71 @@ const getHtmlContent = async () => {
   );
   if (htmlContent) {
     const $ = cheerio.load(htmlContent);
-    ////title img news
-    // $(".cluster__article_visuel img").each((i, el) => {
-    //   console.log($(el).attr("data-src"));
-    // });
 
-    ////link discription news
-    // $(".main_article__txt a").each((i, el) => {
-    //   console.log("https://www.beinsports.com" + $(el).attr("href"));
-    // });
+    //page_title -> main_categorie
+    const mainCategorie = $(".page_title a").text();
+    // console.log(mainCategorie);
 
-    $(".main_article__txt a").each((i, el) => {
-      console.log("https://www.beinsports.com" + $(el).attr("href"));
+    //caption -> sub_categorie
+    const captionArray = [];
+    $(".main_article__txt .caption span").each((i, el) => {
+      captionArray.push($(el).text());
+      // console.log($(el).text());
     });
+
+    //img_link
+    const imgLinkArray = [];
+    $(".cluster__article_visuel img").each((i, el) => {
+      imgLinkArray.push($(el).attr("data-src"));
+      // console.log($(el).attr("data-src"));
+    });
+    // //video_link
+
+    //title
+    const titleArray = [];
+    $(".main_article__txt .cluster-Latest__title1 a").each((i, el) => {
+      titleArray.push($(el).text());
+      // console.log($(el).text());
+    });
+
+    //descriptionLink
+    const descriptionLinkArray = [];
+    $(".cluster-Latest__title1 a").each((i, el) => {
+      descriptionLinkArray.push(
+        "https://www.beinsports.com" + $(el).attr("href")
+      );
+      // console.log("https://www.beinsports.com" + $(el).attr("href"));
+    });
+
+    //description
+    const descriptionArray = [];
+    $(".main_article__txt p").each((i, el) => {
+      descriptionArray.push($(el).text());
+      // console.log($(el).text());
+    });
+
+    // //article_body will get this from --- descriptionLink
+
+    // /*
+    const readFileJson = fs.readFileSync("../data.json", "utf8");
+    const dataJson = JSON.parse(readFileJson);
+    for (let index = 0; index < captionArray.length; index++) {
+      const newObj = {
+        id: index,
+        main_categorie: mainCategorie,
+        sub_categorie: captionArray[index],
+        img_link: imgLinkArray[index],
+        video_link: " ",
+        title: titleArray[index],
+        descriptionLink: descriptionLinkArray[index],
+        description: descriptionArray[index],
+        article_body: " ",
+      };
+      dataJson.push(newObj);
+    }
+
+    fs.writeFileSync("../data.json", JSON.stringify(dataJson));
+    // */
   } else {
     throw new error({ message: "Error in Internet conniction" });
   }
@@ -28,7 +82,7 @@ const getHtmlContent = async () => {
 
 getHtmlContent()
   .then((data) => {
-    console.log(data);
+    console.log("OK: 200");
   })
   .catch((err) => {
     console.log(err.message);
