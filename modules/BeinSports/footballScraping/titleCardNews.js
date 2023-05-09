@@ -1,6 +1,5 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
-const dataJson = require("../data.json");
 const fs = require("fs");
 
 //---
@@ -12,13 +11,13 @@ const getHtmlContent = async () => {
     const $ = cheerio.load(htmlContent);
 
     //page_title -> main_categorie
-    const mainCategorie = $(".page_title a").text();
+    const mainCategorie = $(".page_title a").text().trim();
     // console.log(mainCategorie);
 
     //caption -> sub_categorie
     const captionArray = [];
     $(".main_article__txt .caption span").each((i, el) => {
-      captionArray.push($(el).text());
+      captionArray.push($(el).text().trim());
       // console.log($(el).text());
     });
 
@@ -33,7 +32,7 @@ const getHtmlContent = async () => {
     //title
     const titleArray = [];
     $(".main_article__txt .cluster-Latest__title1 a").each((i, el) => {
-      titleArray.push($(el).text());
+      titleArray.push($(el).text().trim());
       // console.log($(el).text());
     });
 
@@ -49,18 +48,20 @@ const getHtmlContent = async () => {
     //description
     const descriptionArray = [];
     $(".main_article__txt p").each((i, el) => {
-      descriptionArray.push($(el).text());
+      descriptionArray.push($(el).text().trim());
       // console.log($(el).text());
     });
 
     // //article_body will get this from --- descriptionLink
 
     // /*
-    const readFileJson = fs.readFileSync("../data.json", "utf8");
-    const dataJson = JSON.parse(readFileJson);
+    const readFileJson = await fs.readFileSync("data.json", "utf8");
+    const dataJson = await JSON.parse(readFileJson);
+    const dataLingth = dataJson.length;
+
     for (let index = 0; index < captionArray.length; index++) {
       const newObj = {
-        id: index,
+        id: `6900${dataLingth + index}`,
         main_categorie: mainCategorie,
         sub_categorie: captionArray[index],
         img_link: imgLinkArray[index],
@@ -73,7 +74,7 @@ const getHtmlContent = async () => {
       dataJson.push(newObj);
     }
 
-    fs.writeFileSync("../data.json", JSON.stringify(dataJson));
+    await fs.writeFileSync("data.json", JSON.stringify(dataJson));
     // */
   } else {
     throw new error({ message: "Error in Internet conniction" });
@@ -81,7 +82,7 @@ const getHtmlContent = async () => {
 };
 
 getHtmlContent()
-  .then((data) => {
+  .then(() => {
     console.log("OK: 200");
   })
   .catch((err) => {
