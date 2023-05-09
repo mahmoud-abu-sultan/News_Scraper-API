@@ -1,10 +1,10 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
-const dataJsonFile = require("./data.json");
+const dataJsonFile = require("./glopalData.json");
 const fs = require("fs");
 
 //---
-const getHtmlContent = async () => {
+const getMainNewsInfo = async () => {
   const htmlContent = await request.get(
     "https://www.beinsports.com/en/football/"
   );
@@ -28,12 +28,20 @@ const getHtmlContent = async () => {
       imgLinkArray.push($(el).attr("data-src"));
       // console.log($(el).attr("data-src"));
     });
-    // //video_link
 
-    //title
-    const titleArray = [];
+    //has_video
+    let has_video = [];
+    $(".cluster__article_visuel span").each((i, el) => {
+      if ($(".cluster__article_visuel span").html() != undefined) {
+        has_video.push(true);
+      }
+      has_video.push(false);
+    });
+
+    //highlights
+    const highlightsArray = [];
     $(".main_article__txt .cluster-Latest__title1 a").each((i, el) => {
-      titleArray.push($(el).text().trim());
+      highlightsArray.push($(el).text().trim());
       // console.log($(el).text());
     });
 
@@ -53,15 +61,13 @@ const getHtmlContent = async () => {
       // console.log($(el).text());
     });
 
-    // //article_body will get this from --- descriptionLink
-
-    const readFileJson = await fs.readFileSync("data.json", "utf8");
+    const readFileJson = await fs.readFileSync("glopalData.json", "utf8");
     const dataJson = await JSON.parse(readFileJson);
     const dataLingth = dataJson.length;
 
     for (let index = 0; index < captionArray.length; index++) {
       const testFind = dataJsonFile.find(
-        (ele) => ele.title == titleArray[index]
+        (ele) => ele.title == highlightsArray[index]
       );
 
       if (testFind == undefined) {
@@ -70,26 +76,31 @@ const getHtmlContent = async () => {
           main_categorie: mainCategorie,
           sub_categorie: captionArray[index],
           img_link: imgLinkArray[index],
-          video_link: " ",
-          title: titleArray[index],
+          has_video: has_video[index],
+          // video_link: "",
+          // title: "",
+          highlights: highlightsArray[index],
           descriptionLink: descriptionLinkArray[index],
           description: descriptionArray[index],
-          article_body: " ",
+          // article_body: "",
+          // datePublished: ""
         };
 
         dataJson.push(newObj);
       }
     }
 
-    await fs.writeFileSync("data.json", JSON.stringify(dataJson));
+    await fs.writeFileSync("glopalData.json", JSON.stringify(dataJson));
   } else {
-    throw new error({ message: "Error in Internet conniction" });
+    throw new error({
+      message: "Error in Internet conniction - TitleCardNews",
+    });
   }
 };
 
-getHtmlContent()
+getMainNewsInfo()
   .then(() => {
-    console.log("OK: 200");
+    console.log("OK: 200 - TitleCardNews");
   })
   .catch((err) => {
     console.log(err.message);
