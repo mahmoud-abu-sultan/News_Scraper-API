@@ -1,5 +1,6 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
+const dataJsonFile = require("./data.json");
 const fs = require("fs");
 
 //---
@@ -54,28 +55,33 @@ const getHtmlContent = async () => {
 
     // //article_body will get this from --- descriptionLink
 
-    // /*
     const readFileJson = await fs.readFileSync("data.json", "utf8");
     const dataJson = await JSON.parse(readFileJson);
     const dataLingth = dataJson.length;
 
     for (let index = 0; index < captionArray.length; index++) {
-      const newObj = {
-        id: `6900${dataLingth + index}`,
-        main_categorie: mainCategorie,
-        sub_categorie: captionArray[index],
-        img_link: imgLinkArray[index],
-        video_link: " ",
-        title: titleArray[index],
-        descriptionLink: descriptionLinkArray[index],
-        description: descriptionArray[index],
-        article_body: " ",
-      };
-      dataJson.push(newObj);
+      const testFind = dataJsonFile.find(
+        (ele) => ele.title == titleArray[index]
+      );
+
+      if (testFind == undefined) {
+        const newObj = {
+          id: `6900${dataLingth + index}`,
+          main_categorie: mainCategorie,
+          sub_categorie: captionArray[index],
+          img_link: imgLinkArray[index],
+          video_link: " ",
+          title: titleArray[index],
+          descriptionLink: descriptionLinkArray[index],
+          description: descriptionArray[index],
+          article_body: " ",
+        };
+
+        dataJson.push(newObj);
+      }
     }
 
     await fs.writeFileSync("data.json", JSON.stringify(dataJson));
-    // */
   } else {
     throw new error({ message: "Error in Internet conniction" });
   }
