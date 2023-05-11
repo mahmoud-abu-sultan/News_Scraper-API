@@ -1,14 +1,29 @@
 const footballScrap = require("./modules/BeinSports/footballScraping");
-const fs = require("fs");
 
-footballScrap
-  .titleCardNews()
+const handlingScrap = async () => {
+  await footballScrap
+    .titleCardNews()
+    .then(() => {
+      console.log("OK: 200 - TitleCardNews");
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+
+  await footballScrap
+    .descCarsNews()
+    .then(() => {
+      console.log("OK: 200 - DescCarsNews");
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+};
+
+handlingScrap()
   .then(() => {
-    console.log("OK: 200 - TitleCardNews");
+    console.log("OK: 200 - App");
   })
   .catch((err) => {
     console.log(err.message);
   });
-
-console.log("welcom in app.js");
-// footballScrap.descCarsNews();

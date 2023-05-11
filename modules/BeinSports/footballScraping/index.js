@@ -1,7 +1,4 @@
-const titleCardNews = require("./titleCardNews");
-const descCarsNews = require("./descCarsNews");
-
 module.exports = {
-  titleCardNews,
-  descCarsNews,
+  titleCardNews: require("./titleCardNews"),
+  descCarsNews: require("./descCarsNews"),
 };

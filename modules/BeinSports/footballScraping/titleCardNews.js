@@ -85,7 +85,7 @@ const getMainNewsInfo = async () => {
       }
     }
 
-    await fs.writeFileSync("glopalData.json", JSON.stringify(dataJson));
+    fs.writeFileSync("glopalData.json", JSON.stringify(dataJson));
   } else {
     throw new error({
       message: "Error in Internet conniction - TitleCardNews",
