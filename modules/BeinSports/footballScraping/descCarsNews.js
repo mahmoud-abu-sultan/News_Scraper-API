@@ -5,12 +5,22 @@ const fs = require("fs");
 const getDescNewsinfo = async () => {
   const htmlContent = await request.get(
     "https://www.beinsports.com/en/premier-league/video/brighton-beat-man-utd-to-avenge-fa-cup-defeat/2084127"
+    // "https://www.beinsports.com/en/serie-a/news/napoli-end-33-year-wait-for-serie-a-title/2084096"
   );
 
   if (htmlContent) {
     const $ = cheerio.load(htmlContent);
     ////title
+    ////if video get this path
     const title = $(".video h1").text().trim();
+
+    ////if image get this path
+    // const title = $(
+    //   "body > section.page-story > div > div > div.block-col.block-flex-2-columns > main > article > div > article > header > h1"
+    // )
+    //   .text()
+    //   .trim();
+
     // console.log(title);
 
     ////datePublished
@@ -23,7 +33,11 @@ const getDescNewsinfo = async () => {
 
     ////article_body
     const articleBody = $(
+      ////if video will get this path
       "#main_gallery > div > div > div > div > article > section > div:nth-child(1)"
+
+      ////if image will get this path
+      // "body > section.page-story > div > div > div.block-col.block-flex-2-columns > main > article > div > article > div.plrm > section > div:nth-child(1)"
     )
       .text()
       .trim();
