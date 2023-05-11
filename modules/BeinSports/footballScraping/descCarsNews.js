@@ -1,7 +1,6 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
-
-const dataJsonFile = require("./glopalData.json");
+const fs = require("fs");
 
 const getDescNewsinfo = async () => {
   const htmlContent = await request.get(
@@ -10,25 +9,41 @@ const getDescNewsinfo = async () => {
 
   if (htmlContent) {
     const $ = cheerio.load(htmlContent);
-    // //highlights
-    // const highlights = $(".video h1").text().trim();
-    // // console.log(highlights);
+    ////title
+    const title = $(".video h1").text().trim();
+    // console.log(title);
 
-    // //datePublished
-    // const datePublished = $(".main_article__author time").text().trim();
+    ////datePublished
+    const datePublished = $(".main_article__author time").text().trim();
     // console.log(datePublished);
 
-    // //video_link
-    // const videoLink = $("#f198c86f9f22bf4").attr("src");
+    ////video_link
+    const videoLink = $("#f198c86f9f22bf4").attr("src");
     // console.log(videoLink);
 
-    // //article_body
-    // const articleBody = $(
-    //   "#main_gallery > div > div > div > div > article > section > div:nth-child(1)"
-    // )
-    //   .text()
-    //   .trim();
+    ////article_body
+    const articleBody = $(
+      "#main_gallery > div > div > div > div > article > section > div:nth-child(1)"
+    )
+      .text()
+      .trim();
     // console.log(articleBody);
+
+    //---
+    const readFileJson = fs.readFileSync("./glopalData.json", "utf8");
+    const dataJson = await JSON.parse(readFileJson);
+
+    const idOpj = "69001";
+    const thisOpj = dataJson.find((ele) => ele.id == idOpj);
+
+    if (thisOpj != undefined) {
+      thisOpj.title = title;
+      thisOpj.datePublished = datePublished;
+      thisOpj.videoLink = videoLink;
+      thisOpj.articleBody = articleBody;
+
+      await fs.writeFileSync("./glopalData.json", JSON.stringify(dataJson));
+    }
   } else {
     throw new console.error({
       message: "Error in Internet conniction - DescCarsNews",
@@ -36,10 +51,12 @@ const getDescNewsinfo = async () => {
   }
 };
 
-getDescNewsinfo()
-  .then((data) => {
-    console.log("OK: 200 - DescCarsNews");
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+module.exports = getDescNewsinfo;
+
+// getDescNewsinfo()
+//   .then((data) => {
+//     console.log("OK: 200 - DescCarsNews");
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });

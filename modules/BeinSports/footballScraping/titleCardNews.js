@@ -1,6 +1,5 @@
 const request = require("request-promise");
 const cheerio = require("cheerio");
-const dataJsonFile = require("./glopalData.json");
 const fs = require("fs");
 
 //---
@@ -61,13 +60,13 @@ const getMainNewsInfo = async () => {
       // console.log($(el).text());
     });
 
-    const readFileJson = await fs.readFileSync("glopalData.json", "utf8");
+    const readFileJson = fs.readFileSync("glopalData.json", "utf8");
     const dataJson = await JSON.parse(readFileJson);
     const dataLingth = dataJson.length;
 
     for (let index = 0; index < captionArray.length; index++) {
-      const testFind = dataJsonFile.find(
-        (ele) => ele.title == highlightsArray[index]
+      const testFind = dataJson.find(
+        (ele) => ele.highlights == highlightsArray[index]
       );
 
       if (testFind == undefined) {
@@ -77,13 +76,9 @@ const getMainNewsInfo = async () => {
           sub_categorie: captionArray[index],
           img_link: imgLinkArray[index],
           has_video: has_video[index],
-          // video_link: "",
-          // title: "",
           highlights: highlightsArray[index],
           descriptionLink: descriptionLinkArray[index],
           description: descriptionArray[index],
-          // article_body: "",
-          // datePublished: ""
         };
 
         dataJson.push(newObj);
@@ -98,10 +93,12 @@ const getMainNewsInfo = async () => {
   }
 };
 
-getMainNewsInfo()
-  .then(() => {
-    console.log("OK: 200 - TitleCardNews");
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+module.exports = getMainNewsInfo;
+
+// getMainNewsInfo()
+//   .then(() => {
+//     console.log("OK: 200 - TitleCardNews");
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
