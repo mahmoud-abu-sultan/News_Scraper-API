@@ -4,64 +4,63 @@ const fs = require("fs");
 
 //---
 const getMainNewsInfo = async () => {
+  const categorie = "NBA"; //--- get from 'front'
+  // "Tennis";
+
   const htmlContent = await request.get(
-    "https://www.beinsports.com/en/football/"
+    `https://www.beinsports.com/en/${categorie}/`
   );
   if (htmlContent) {
     const $ = cheerio.load(htmlContent);
 
-    //page_title -> main_categorie
+    //// page_title -> main_categorie
     const mainCategorie = $(".page_title a").text().trim();
-    // console.log(mainCategorie);
 
-    //caption -> sub_categorie
+    //// caption -> sub_categorie
     const captionArray = [];
     $(".main_article__txt .caption span").each((i, el) => {
       captionArray.push($(el).text().trim());
-      // console.log($(el).text());
     });
 
-    //img_link
+    //// img_link
     const imgLinkArray = [];
     $(".cluster__article_visuel img").each((i, el) => {
       imgLinkArray.push($(el).attr("data-src"));
-      // console.log($(el).attr("data-src"));
     });
 
-    //has_video
+    //// has_video
     let has_video = [];
     $(".cluster__article_visuel span").each((i, el) => {
-      if ($(".cluster__article_visuel span").html() != undefined) {
+      if ($(el).html != undefined) {
         has_video.push(true);
       }
       has_video.push(false);
     });
 
-    //highlights
+    //// highlights
     const highlightsArray = [];
     $(".main_article__txt .cluster-Latest__title1 a").each((i, el) => {
       highlightsArray.push($(el).text().trim());
-      // console.log($(el).text());
     });
 
-    //descriptionLink
+    //// descriptionLink
     const descriptionLinkArray = [];
     $(".cluster-Latest__title1 a").each((i, el) => {
       descriptionLinkArray.push(
         "https://www.beinsports.com" + $(el).attr("href")
       );
-      // console.log("https://www.beinsports.com" + $(el).attr("href"));
     });
 
-    //description
+    //// description
     const descriptionArray = [];
     $(".main_article__txt p").each((i, el) => {
       descriptionArray.push($(el).text().trim());
-      // console.log($(el).text());
     });
 
-    const readFileJson = fs.readFileSync("footballData.json", "utf8");
+    // --- --- --- --- --- ---
+    const readFileJson = fs.readFileSync(`${categorie}Data.json`, "utf8");
     const dataJson = await JSON.parse(readFileJson);
+
     const dataLingth = dataJson.length;
 
     for (let index = 1; index <= captionArray.length; index++) {
@@ -85,7 +84,7 @@ const getMainNewsInfo = async () => {
       }
     }
 
-    fs.writeFileSync("footballData.json", JSON.stringify(dataJson));
+    fs.writeFileSync(`${categorie}Data.json`, JSON.stringify(dataJson));
   } else {
     throw new error({
       message: "Error in Internet conniction - TitleCardNews",
