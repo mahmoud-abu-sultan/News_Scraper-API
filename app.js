@@ -1,5 +1,6 @@
 const footballScrap = require("./modules/BeinSports/footballScraping");
 
+// --- footballScrap ---
 const handlingScrap = async () => {
   await footballScrap
     .titleCardNews()
@@ -27,3 +28,4 @@ handlingScrap()
   .catch((err) => {
     console.log(err.message);
   });
+// --------------------------

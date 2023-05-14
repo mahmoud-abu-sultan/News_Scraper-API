@@ -44,7 +44,7 @@ const getDescNewsinfo = async () => {
     // console.log(articleBody);
 
     //---
-    const readFileJson = fs.readFileSync("./glopalData.json", "utf8");
+    const readFileJson = fs.readFileSync("footballData.json", "utf8");
     const dataJson = await JSON.parse(readFileJson);
 
     const idOpj = "69001";
@@ -56,7 +56,7 @@ const getDescNewsinfo = async () => {
       thisOpj.videoLink = videoLink;
       thisOpj.articleBody = articleBody;
 
-      await fs.writeFileSync("./glopalData.json", JSON.stringify(dataJson));
+      await fs.writeFileSync("footballData.json", JSON.stringify(dataJson));
     }
   } else {
     throw new console.error({

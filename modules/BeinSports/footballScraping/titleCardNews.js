@@ -60,11 +60,11 @@ const getMainNewsInfo = async () => {
       // console.log($(el).text());
     });
 
-    const readFileJson = fs.readFileSync("glopalData.json", "utf8");
+    const readFileJson = fs.readFileSync("footballData.json", "utf8");
     const dataJson = await JSON.parse(readFileJson);
     const dataLingth = dataJson.length;
 
-    for (let index = 0; index < captionArray.length; index++) {
+    for (let index = 1; index <= captionArray.length; index++) {
       const testFind = dataJson.find(
         (ele) => ele.highlights == highlightsArray[index]
       );
@@ -85,7 +85,7 @@ const getMainNewsInfo = async () => {
       }
     }
 
-    fs.writeFileSync("glopalData.json", JSON.stringify(dataJson));
+    fs.writeFileSync("footballData.json", JSON.stringify(dataJson));
   } else {
     throw new error({
       message: "Error in Internet conniction - TitleCardNews",
