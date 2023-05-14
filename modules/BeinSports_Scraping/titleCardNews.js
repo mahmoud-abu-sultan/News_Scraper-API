@@ -4,8 +4,8 @@ const fs = require("fs");
 
 //---
 const getMainNewsInfo = async () => {
-  const categorie = "NBA"; //--- get from 'front'
-  // "Tennis";
+  const categorie = "Motorsports"; //--- get from 'front'
+  // Football Tennis Basketball Cricket Motorsports NBA
 
   const htmlContent = await request.get(
     `https://www.beinsports.com/en/${categorie}/`
@@ -58,7 +58,10 @@ const getMainNewsInfo = async () => {
     });
 
     // --- --- --- --- --- ---
-    const readFileJson = fs.readFileSync(`${categorie}Data.json`, "utf8");
+    const readFileJson = fs.readFileSync(
+      `./data/${categorie}Data.json`,
+      "utf8"
+    );
     const dataJson = await JSON.parse(readFileJson);
 
     const dataLingth = dataJson.length;
@@ -84,7 +87,7 @@ const getMainNewsInfo = async () => {
       }
     }
 
-    fs.writeFileSync(`${categorie}Data.json`, JSON.stringify(dataJson));
+    fs.writeFileSync(`./data/${categorie}Data.json`, JSON.stringify(dataJson));
   } else {
     throw new error({
       message: "Error in Internet conniction - TitleCardNews",

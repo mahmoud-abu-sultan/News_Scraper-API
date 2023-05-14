@@ -3,20 +3,24 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 
 const getDescNewsinfo = async () => {
-  const main_categorie = "NBA"; //--- get from json us front
-  // "Tennis";
+  const main_categorie = "Motorsports"; //--- get from json us front
+  // Football Tennis Basketball Cricket Motorsports NBA
 
   const descriptionLink = //I--- get from json us front
-    // "https://www.beinsports.com/en/uefa-europa-league/video/gatti-snatches-juve-late-draw-against-sevilla/2088789";//f v
-    // "https://www.beinsports.com/en/tennis/news/tsitsipas-wins-after-long-wait-in-miami/2062412";//t i
-    "https://www.beinsports.com/en/nba/video/nba-round-up-lakers-crush-grizzlies-to-advanc/2079721"; //n v
+    //test // "https://www.beinsports.com/en/uefa-europa-league/video/gatti-snatches-juve-late-draw-against-sevilla/2088789";//f v
+    //test // "https://www.beinsports.com/en/tennis/news/tsitsipas-wins-after-long-wait-in-miami/2062412";//t i
+    //test // "https://www.beinsports.com/en/nba/video/nba-round-up-lakers-crush-grizzlies-to-advanc/2079721"; //n v
+    "https://www.beinsports.com/en/f1/news/red-bulls-perez-wins-azerbaijan-grand-prix-sp/2079909"; //m I
 
   const htmlContent = await request.get(descriptionLink);
   // ---
-  const readFileJson = fs.readFileSync(`${main_categorie}Data.json`, "utf8");
+  const readFileJson = fs.readFileSync(
+    `./data/${main_categorie}Data.json`,
+    "utf8"
+  );
   const dataJson = await JSON.parse(readFileJson);
 
-  const hasVideo = true; /*dataJson.find(
+  const hasVideo = false; /*dataJson.find(
     (ele) => ele.descriptionLink === descriptionLink
   ).has_video;*/
 
@@ -47,7 +51,7 @@ const getDescNewsinfo = async () => {
         return "body > section.page-story > div > div > div.block-col.block-flex-2-columns > main > article > div > article > div.plrm > section > div:nth-child(1)";
       }
     };
-    const articleBody = $(`${selector_article_body()}`).text().trim();
+    const articleBody = $(`./data/${selector_article_body()}`).text().trim();
 
     // --- ---
     const idOpj = "69001";
