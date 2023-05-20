@@ -2,18 +2,38 @@
   {
     "id": "69001",
     "main_categorie": "Football",
+    "sub_categorie": "LaLiga",
+    "img_link": "https://images.beinsports.com/wxv_1wITmVSwMzCD8T2UW53s5tI=/670x424/smart/4736787-33F38UL-preview.jpg",
+    "has_video": false,
+    "highlights": "Barcelona win Spanish La Liga title for 27th time",
+    "descriptionLink": "https://www.beinsports.com/en/laliga/video/barcelona-win-spanish-la-liga-title-for-27th-/2090856",
+    "description": "Barcelona won Spain's La Liga for the first time since 2019 by thrashing Espanyol 4-2 on Sunday, wrestling the title from rivals Real Madrid.",
+    "title": "Barcelona win Spanish La Liga title for 27th time",
+    "datePublished": "May 14, 2023 23:15",
+    "articleBody": "The Catalan giants clinched their 27th Spanish championship with an emphatic derby victory, with Robert Lewandowski scoring twice, alongside Alejandro Balde and Jules Kounde's goals."
+  },
+  {
+    "id": "69002",
+    "main_categorie": "Football",
+    "sub_categorie": "African Champions League",
+    "img_link": "https://images.beinsports.com/X4OyFpxnzfxriu4hDQProZxOc4k=/670x424/smart/4733015-MicrosoftTeams-image-%28115%29.png",
+    "has_video": true,
+    "highlights": "Esperance 0-3 Al Ahly - Report",
+    "descriptionLink": "https://www.beinsports.com/en/african-champions-league/video/two-goal-tau-takes-ahly-to-verge-of-caf-champ/2089639",
+    "description": "South African Percy Tau scored twice as Al Ahly of Egypt all but sealed a CAF Champions League final place after winning 3-0 away to Esperance of Tunisia on Friday."
+  },
+  {
+    "id": "69003",
+    "main_categorie": "Football",
     "sub_categorie": "UEFA Europa League",
     "img_link": "https://images.beinsports.com/FM-FBhQ-BvhoPR-GZDOLob4V9LM=/181x115/smart/4731486-2023-05-11T202834Z_286293033_UP1EJ5B1KVLJH_RTRMADP_3_SOCCER-EUROPA-ROM-B04-REPORT.JPG",
     "has_video": false,
     "highlights": "Juve snatch Sevilla draw in Europa League semi",
     "descriptionLink": "https://www.beinsports.com/en/uefa-europa-league/video/gatti-snatches-juve-late-draw-against-sevilla/2088789",
-    "description": "Federico Gatti headed home in the 97th minute to earn Juventus a 1-1 draw against Sevilla in their Europa League semi-final first leg on Thursday.",
-    "title": "",
-    "datePublished": "March 27, 2023 23:33",
-    "articleBody": ""
+    "description": "Federico Gatti headed home in the 97th minute to earn Juventus a 1-1 draw against Sevilla in their Europa League semi-final first leg on Thursday."
   },
   {
-    "id": "69002",
+    "id": "69004",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/pUqtoBlXbNygmrJmj4uzOwLIQ3c=/670x424/smart/4731519-2023-05-11T194051Z_681646524_UP1EJ5B1IO1HY_RTRMADP_3_SOCCER-EUROPA-JUV-SEV-REPORT.JPG",
@@ -23,7 +43,7 @@
     "description": "Brighton secured a last gasp win over Man United with a late Alexis Mac Allister penalty."
   },
   {
-    "id": "69003",
+    "id": "69005",
     "main_categorie": "Football",
     "sub_categorie": "Serie A",
     "img_link": "https://images.beinsports.com/fEQqFhtbw_O60pwwygmQKgCsid0=/670x424/smart/4722386-2023-05-04T210051Z_1916966043_UP1EJ541MDDC4_RTRMADP_3_SOCCER-ENGLAND-BRH-MUN-REPORT.JPG",
@@ -33,7 +53,7 @@
     "description": "Napoli finally ended their long wait to win Italy's Serie A on Thursday after a 1-1 draw at Udinese secured their third league title with a record-equalling five games to play."
   },
   {
-    "id": "69004",
+    "id": "69006",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/xB4PRu64RzDOpZLK9DRUJcjOODI=/670x424/smart/4722328-2023-05-04T201321Z_1565878461_UP1EJ541K67A6_RTRMADP_3_SOCCER-ITALY-UDI-NAP-REPORT.JPG",
@@ -43,7 +63,7 @@
     "description": "Erling Haaland made a little bit of history as Manchester City returned to the top of the Premier League table with a 2-1 win at Fulham"
   },
   {
-    "id": "69005",
+    "id": "69007",
     "main_categorie": "Football",
     "sub_categorie": "Bundesliga",
     "img_link": "https://images.beinsports.com/V6xoGupnkR8XG2zeO_a44c1PTus=/670x424/smart/4715990-2023-04-30T134425Z_1710439000_UP1EJ4U1260KJ_RTRMADP_3_SOCCER-ENGLAND-FUL-MCI-REPORT.JPG",
@@ -53,7 +73,7 @@
     "description": "Borussia Dortmund handed the advantage in the Bundesliga title race back to Bayern Munich on Friday after being held to a 1-1 draw at lowly Bochum."
   },
   {
-    "id": "69006",
+    "id": "69008",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/IQpKlUPMLUKKaSUhdl0cmfERUwc=/181x115/smart/4716041-2023-04-30T134307Z_367804216_UP1EJ4U123TKC_RTRMADP_3_SOCCER-ENGLAND-MUN-AVA-REPORT.JPG",
@@ -63,7 +83,7 @@
     "description": "Son caps Spurs fightback to rescue Man Utd draw"
   },
   {
-    "id": "69007",
+    "id": "69009",
     "main_categorie": "Football",
     "sub_categorie": "UEFA Champions League",
     "img_link": "https://images.beinsports.com/JBsGi8OA3K8JTU8ncdnHjq3aFEM=/181x115/smart/4716079-2023-04-30T150159Z_291314748_UP1EJ4U15R9TM_RTRMADP_3_SOCCER-GERMANY-BAY-BCS-REPORT.JPG",
@@ -73,7 +93,7 @@
     "description": "Real Madrid have confirmed that Luka Modrić is set for a spell on the sidelines."
   },
   {
-    "id": "69008",
+    "id": "690010",
     "main_categorie": "Football",
     "sub_categorie": "LaLiga",
     "img_link": "https://images.beinsports.com/A0lo-tu5BVIJrzcGTiGb_MTRKYo=/181x115/smart/4716256-2023-04-30T173417Z_1920387611_UP1EJ4U1CT40C_RTRMADP_3_SOCCER-ENGLAND-LIV-TOT-REPORT.JPG",
@@ -83,7 +103,7 @@
     "description": "Castellanos hits four as Girona thrash champions Madrid"
   },
   {
-    "id": "69009",
+    "id": "690011",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/7rAU4Dgsw_YMbUxxPK-HG5uLEZ0=/670x424/smart/4713006-33E33JY-highres.jpg",
@@ -93,7 +113,7 @@
     "description": "Aston Villa moved up to fifth in the Premier League with a 1-0 win over Fulham on Tuesday, as Leeds and Leicester played out a 1-1 draw in the battle to beat the drop."
   },
   {
-    "id": "690010",
+    "id": "690012",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/SX4VZwxtHLqZDqQG1cwoa5_I1D4=/670x424/smart/son-heung-min_1gw6wqrsgpfxy10u2toi4etthl.jpg",
@@ -103,7 +123,7 @@
     "description": "Liverpool crushed Leeds 6-1 as Cody Gakpo's controversial opener provided the spark for the Reds' first win in five Premier League games on Monday."
   },
   {
-    "id": "690011",
+    "id": "690013",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/GtL9H3koVZBr190DR29gY2Qwfhc=/181x115/smart/4710811-2023-04-27T202229Z_872987650_UP1EJ4R1KLFEQ_RTRMADP_3_SOCCER-ENGLAND-EVE-NEW-REPORT.JPG",
@@ -113,7 +133,7 @@
     "description": "Erling Haaland equalled the Premier League record of 32 goals in a 38-game season as Manchester City beat Leicester 3-1 to close within three points of Arsenal at the top of the table on Saturday."
   },
   {
-    "id": "690012",
+    "id": "690014",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/CrlwVSBHL1yU4SXxRH0RT70drLs=/181x115/smart/4710415-2023-04-27T185038Z_2004343847_UP1EJ4R1GCC8V_RTRMADP_3_SOCCER-CHAMPIONS-FCB-CHE-REPORT.JPG",
@@ -123,7 +143,7 @@
     "description": "Marcus Rashford will miss Manchester United's Europa League quarter-final first-leg clash with Sevilla after suffering a muscle injury that is likely to keep him out for \"a few games\", the club announ"
   },
   {
-    "id": "690013",
+    "id": "690015",
     "main_categorie": "Football",
     "sub_categorie": "UEFA Champions League",
     "img_link": "https://images.beinsports.com/k8jVmA66_04-p8dFiPThslsxWlk=/181x115/smart/4710013-2022-09-06T200317Z_1320590273_UP1EI961JPG9J_RTRMADP_3_SOCCER-CHAMPIONS-DOR-COP-REPORT.JPG",
@@ -133,7 +153,7 @@
     "description": "Haaland hits 45 as Man City demolish Bayern"
   },
   {
-    "id": "690014",
+    "id": "690016",
     "main_categorie": "Football",
     "sub_categorie": "Football",
     "img_link": "https://images.beinsports.com/IH0J9JORKK11-RMNK_hGUpFDZ3o=/670x424/smart/4712132-2023-04-18T183203Z_115590716_UP1EJ4I1FHD76_RTRMADP_3_SOCCER-CHAMPIONS-CHE-MAD-REPORT.JPG",
@@ -143,7 +163,7 @@
     "description": "Powerful stunt removing third of names from shirts and unveiling of ‘unforgettable’ mural all part of dedicated ‘Alzheimer’s Society International’"
   },
   {
-    "id": "690015",
+    "id": "690017",
     "main_categorie": "Football",
     "sub_categorie": "LaLiga",
     "img_link": "https://images.beinsports.com/mKwcHMTNKnPreeAs6uFHdZfDQd8=/181x115/smart/4710814-2023-04-21T204547Z_669174181_MT1PANP2639400156_RTRMADP_3_SOCCER-ANGERS-VS-PSG-L1.JPG",
@@ -153,7 +173,7 @@
     "description": "Title-chasing Barcelona were held to a 0-0 draw by Girona at Camp Nou on Monday, extending their lead on Real Madrid at the top of La Liga by one point, now sitting 13 clear with 10 games remaining."
   },
   {
-    "id": "690016",
+    "id": "690018",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/scdc-OvrkK7joIn9JJeRsVR_Ov4=/181x115/smart/4710852-2023-04-26T214801Z_528483622_UP1EJ4Q1OK0NE_RTRMADP_3_SOCCER-SPAIN-RAY-FCB-REPORT.JPG",
@@ -163,7 +183,7 @@
     "description": "Premier League strugglers Leicester appointed Dean Smith as their manager until the end of the season on Monday."
   },
   {
-    "id": "690017",
+    "id": "690019",
     "main_categorie": "Football",
     "sub_categorie": "Ligue 1",
     "img_link": "https://images.beinsports.com/BKIhZN2T1fsDnYA2seoTMumrGwI=/181x115/smart/4712143-630607de1219a.png",
@@ -173,7 +193,7 @@
     "description": "Marseille lost ground in the race for automatic UCL qualification after a 0-0 stalemate at Lorient in Ligue 1 on Sunday, while Monaco blew a two-goal lead to draw with French Cup finalists Nantes."
   },
   {
-    "id": "690018",
+    "id": "690020",
     "main_categorie": "Football",
     "sub_categorie": "LaLiga",
     "img_link": "https://images.beinsports.com/nUdkZ-iv6opnY0He17uWguGuCnI=/670x424/smart/4707402-2023-04-25T190409Z_1280054777_UP1EJ4P1GYW46_RTRMADP_3_SOCCER-SPAIN-GIR-MAD-REPORT.JPG",
@@ -183,7 +203,7 @@
     "description": "Atletico Madrid cut the gap on second place Real Madrid to just two points with a 2-1 win over 10-man Rayo Vallecano on Sunday in La Liga."
   },
   {
-    "id": "690019",
+    "id": "690021",
     "main_categorie": "Football",
     "sub_categorie": "Ligue 1",
     "img_link": "https://images.beinsports.com/u0hKdSxA1fYUkyhXGzXqlWqqVjI=/670x424/smart/4707572-2023-04-25T190956Z_1410126414_UP1EJ4P1H8I4O_RTRMADP_3_SOCCER-ENGLAND-AVA-FUL-REPORT.JPG",
@@ -193,7 +213,7 @@
     "description": "Messi scored one goal and set up another for Ramos as PSG won 2-0 at Nice on Saturday to restore their six-point lead at the top of the Ligue 1 table and ease the pressure on coach Christophe Galtier."
   },
   {
-    "id": "690020",
+    "id": "690022",
     "main_categorie": "Football",
     "sub_categorie": "English Championship",
     "img_link": "https://images.beinsports.com/PoYpsrZlyeN3C3IqQajr3-f8lcs=/670x424/smart/4697079-2023-04-17T202506Z_1166967782_UP1EJ4H1KPTBR_RTRMADP_3_SOCCER-ENGLAND-LEE-LIV-REPORT.JPG",
@@ -203,7 +223,7 @@
     "description": "Burnley secured promotion back to the Premier League at the first time of asking after Vincent Kompany's men won 2-1 at Middlesbrough on Friday."
   },
   {
-    "id": "690021",
+    "id": "690023",
     "main_categorie": "Football",
     "sub_categorie": "Serie A",
     "img_link": "https://images.beinsports.com/-nRElrZgG6RAGLsxwFgDRgAdNbE=/670x424/smart/4694699-2023-04-15T170008Z_1475675725_UP1EJ4F1B851X_RTRMADP_3_SOCCER-ENGLAND-MCI-LEI-REPORT.JPG",
@@ -213,7 +233,7 @@
     "description": "Napoli had unfortunate Antonino Gallo's own goal to thank for getting their Serie A title bid back on track with a 2-1 win at Lecce on Friday, while AC Milan were held to a goalless draw by Empoli."
   },
   {
-    "id": "690022",
+    "id": "690024",
     "main_categorie": "Football",
     "sub_categorie": "French Cup",
     "img_link": "https://images.beinsports.com/-Uo2L5BeZRe-G-T1qXgBkBkdRHU=/181x115/smart/4694839-33DA63H-highres.jpg",
@@ -223,7 +243,7 @@
     "description": "Fares Chaibi scored late as Toulouse beat second-tier Annecy 2-1 on Thursday to reach the French Cup final."
   },
   {
-    "id": "690023",
+    "id": "690025",
     "main_categorie": "Football",
     "sub_categorie": "Premier league",
     "img_link": "https://images.beinsports.com/AWwhK7Yet2YGF4LW9z_RxRyAdBU=/181x115/smart/4694840-2023-04-15T203657Z_1734295610_UP1EJ4F1L9JCB_RTRMADP_3_SOCCER-SPAIN-CCF-MAD-REPORT.JPG",
@@ -233,7 +253,7 @@
     "description": "Chelsea held by Liverpool in first game after Potter's sacking"
   },
   {
-    "id": "690024",
+    "id": "690026",
     "main_categorie": "Football",
     "sub_categorie": "Ligue 1",
     "img_link": "https://images.beinsports.com/2PuV8mTMlmBtgEtV_aImGsp7MoQ=/670x424/smart/4690946-2023-04-08T133529Z_1078645652_UP1EJ4811R3A0_RTRMADP_3_SOCCER-ENGLAND-MUN-EVE-REPORT.JPG",
@@ -243,7 +263,7 @@
     "description": "Marseille missed the chance to put some pressure on Ligue 1 leaders Paris Saint-Germain as they were held to a 1-1 home draw by Montpellier on Friday."
   },
   {
-    "id": "690025",
+    "id": "690027",
     "main_categorie": "Football",
     "sub_categorie": "Football",
     "img_link": "https://images.beinsports.com/KxhttDEGB5gdMikR7cI0PRB8iSE=/670x424/smart/4690429-2023-04-11T203522Z_805965158_UP1EJ4B1L6WDW_RTRMADP_3_SOCCER-CHAMPIONS-MCI-BAY-REPORT.JPG",
@@ -253,7 +273,7 @@
     "description": "Barcelona booked their place in the Women's Champions League semi-finals by thrashing Roma 5-1 on Wednesday at Camp Nou to progress 6-1 on aggregate."
   },
   {
-    "id": "690026",
+    "id": "690028",
     "main_categorie": "Football",
     "sub_categorie": "Football",
     "img_link": "https://images.beinsports.com/wdLH9hooOPOgBqHaQcDaNlAVyWI=/181x115/smart/4690408-2023-04-11T204506Z_1628749959_UP1EJ4B1LN4F6_RTRMADP_3_SOCCER-CHAMPIONS-SLB-INT-REPORT.JPG",
@@ -263,30 +283,10 @@
     "description": "Arsenal overcame a 1-0 first leg defeat to reach the last four for the first time in 10 years in front of a record crowd of over 20,000 for a Women's Champions League game in England"
   },
   {
-    "id": "690027",
-    "main_categorie": "Football",
-    "sub_categorie": "Premier league",
-    "img_link": "https://images.beinsports.com/_ve_OoNjSCJZNJlD4gx9CHvLxts=/181x115/smart/4690899-2023-03-19T151552Z_1807575579_UP1EJ3J16EEEM_RTRMADP_3_SOCCER-ITALY-TOR-NAP-REPORT.JPG",
-    "has_video": false,
-    "highlights": "Ferguson and Wenger inducted into PL Hall of Fame",
-    "descriptionLink": "https://www.beinsports.com/en/premier-league/news/sir-alex-ferguson-and-arsene-wenger-inducted-/2063088",
-    "description": "Sir Alex Ferguson and Arsène Wenger have been announced as the first two managers inducted into the Premier League Hall of Fame"
-  },
-  {
-    "id": "690028",
-    "main_categorie": "Football",
-    "sub_categorie": "Football",
-    "img_link": "https://images.beinsports.com/NcuunVcSB2ZHLk4F1fj5Qd53C2c=/181x115/smart/4690337-2023-04-11T104554Z_56338072_UP1EJ4B0TWH20_RTRMADP_3_SOCCER-CHAMPIONS-MAD-CHE-PREVIEW.JPG",
-    "has_video": true,
-    "highlights": "McTominay stars as Scotland down Spain",
-    "descriptionLink": "https://www.beinsports.com/en/football/news/mctominay-stars-as-scotland-down-spain-croati/2062893",
-    "description": "Scott McTominay scored twice as Scotland claimed a famous 2-0 victory over Spain at Hampden Park in Euro 2024 qualifying on Tuesday, while Croatia won in Turkey."
-  },
-  {
     "id": "690029",
     "main_categorie": "Football",
-    "img_link": "https://images.beinsports.com/53XAzXvbbeW3SS1UvJZUgxIMoyo=/670x424/smart/4690352-Carrie-Brown-and-Kate-Lee-in-front-of-mural.jpg",
+    "img_link": "https://images.beinsports.com/_ve_OoNjSCJZNJlD4gx9CHvLxts=/181x115/smart/4690899-2023-03-19T151552Z_1807575579_UP1EJ3J16EEEM_RTRMADP_3_SOCCER-ITALY-TOR-NAP-REPORT.JPG",
     "has_video": false,
-    "descriptionLink": "https://www.beinsports.com/en/premier-league/news/leeds-2-newcastle-2-report/2089810"
+    "descriptionLink": "https://www.beinsports.com/en/premier-league/news/brentfords-toney-banned-for-eight-months-over/2092580"
   }
 ]

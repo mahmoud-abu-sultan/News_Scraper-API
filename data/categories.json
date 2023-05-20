@@ -1,0 +1,8 @@
+[
+  { "id": "Foo", "categorie_name": "Football" },
+  { "id": "Ten", "categorie_name": "Tennis" },
+  { "id": "Bas", "categorie_name": "Basketball" },
+  { "id": "Cri", "categorie_name": "Cricket" },
+  { "id": "Mot", "categorie_name": "Motorsports" },
+  { "id": "NBA", "categorie_name": "NBA" }
+]

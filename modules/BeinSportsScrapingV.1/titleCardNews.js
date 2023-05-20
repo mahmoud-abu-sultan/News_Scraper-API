@@ -4,7 +4,7 @@ const fs = require("fs");
 
 //---
 const getMainNewsInfo = async () => {
-  const categorie = "Motorsports"; //--- get from 'front'
+  const categorie = "Football"; //--- get from 'front'
   // Football Tennis Basketball Cricket Motorsports NBA
 
   const htmlContent = await request.get(
@@ -96,11 +96,3 @@ const getMainNewsInfo = async () => {
 };
 
 module.exports = getMainNewsInfo;
-
-// getMainNewsInfo()
-//   .then(() => {
-//     console.log("OK: 200 - TitleCardNews");
-//   })
-//   .catch((err) => {
-//     console.log(err.message);
-//   });
